@@ -1,0 +1,11 @@
+@import './base/reset';
+@import './base/global';
+@import './base/variables';
+@import './base/mixins';
+
+@import './components/navigation';
+@import './components/burger';
+@import './components/intro';
+@import './components/benefits';
+@import './components/articles';
+@import './components/footer';

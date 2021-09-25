@@ -1,0 +1,124 @@
+.footer {
+  background-color: $color-primary-dark-blue;
+  padding: 50px 0;
+  margin: 0;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+
+  @include mobile() {
+    padding: 0;
+  }
+
+  @include tablet() {
+    padding: 0;
+  }
+
+  &__container {
+    @include container();
+    @include grid($grid-template-columns: repeat(4, 1fr), $grid-gap: 30px);
+
+    @include mobile() {
+      padding: 50px;
+      @include grid($grid-template-columns: 1fr, $grid-gap: 20px);
+    }
+
+    @include tablet() {
+      padding: 50px;
+      @include grid($grid-template-columns: 1fr, $grid-gap: 20px);
+    }
+  }
+
+  &__socials {
+    @include flex($flex-direction: column, $justify-content: space-between);
+
+    &-list {
+      @include flex($gap: 15px);
+    }
+
+    @include mobile() {
+      align-self: center;
+      justify-self: center;
+    }
+
+    @include tablet() {
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  &__info {
+    @include mobile() {
+      align-self: center;
+      justify-self: center;
+    }
+
+    @include tablet() {
+      align-self: center;
+      justify-self: center;
+    }
+  }
+
+  &__list {
+    @include flex($flex-direction: column, $gap: 20px);
+
+    a {
+      color: $color-neutral-white;
+
+      &:hover {
+        color: $color-primary-lime-green;
+      }
+    }
+
+    @include mobile() {
+      @include flex($flex-direction: column, $align-items: center, $gap: 20px);
+    }
+
+    @include tablet() {
+      @include flex($flex-direction: column, $align-items: center, $gap: 20px);
+    }
+  }
+
+  &__copyright {
+    @include flex($flex-direction: column, $justify-content: space-between);
+
+    &-link {
+      @include request-link(10px 15px);
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+
+      &:hover {
+        color: $color-neutral-white;
+        opacity: 0.8;
+      }
+    }
+
+    &-text {
+      font-size: $font-size-small;
+      color: $color-neutral-grayish-blue;
+    }
+
+    @include mobile() {
+      @include flex($flex-direction: column, $align-items: center, $gap: 20px);
+    }
+
+    @include tablet() {
+      @include flex($flex-direction: column, $align-items: center, $gap: 20px);
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

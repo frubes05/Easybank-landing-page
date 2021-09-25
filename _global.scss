@@ -1,0 +1,39 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Public Sans', sans-serif;
+    font-size:18px;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.visually-hidden{
+    display: none;
+}
+
+.icon { 
+    width: 75px; 
+    height: 75px;
+    background:linear-gradient(to right,hsl(136, 65%, 51%),hsl(192, 70%, 51%));
+    border-radius: 50%;
+
+    &-socials{
+        width: 25px;
+        height: 25px;
+        background: inherit;
+        border-radius: none;
+
+        &:hover{
+            fill:hsl(136, 65%, 51%);
+        }
+    }
+  }
